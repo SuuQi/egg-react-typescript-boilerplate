@@ -1,0 +1,61 @@
+{
+  "name": "kun-ui",
+  "version": "1.1.3",
+  "description": "kun-ui",
+  "scripts": {
+    "dev": "concurrently -k -p \"[{name}]\" -n \"client-dev,server-dev\" -c \"cyan.bold,green.bold\" \"npm run client-dev\" \"npm run server-dev\"",
+    "dist": "npm run client-dist-assets && npm run client-dist-webpack && npm run server-dist",
+    "client-dev": "node ./build/development.js",
+    "client-dist-assets": "node ./build/production.js",
+    "client-dist-webpack": "webpack --config ./build/webpack.config.prod.js",
+    "server-dev": "egg-bin dev -r egg-ts-helper/register --port=9000 --ts",
+    "server-dist": "ets && tsc -p tsconfig.json",
+    "start": "egg-scripts start --title=pangu-kun-ui --port=9000",
+    "stop": "egg-scripts stop --title=pangu-kun-ui",
+    "debug": "egg-bin debug -r egg-ts-helper/register",
+    "test-local": "egg-bin test -r egg-ts-helper/register",
+    "test": "npm run lint --fix && npm run test-local",
+    "lint": "tslint --project . -c tslint.json",
+    "clean": "ets clean"
+  },
+  "engines": {
+    "node": ">=8.9.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@g.hz.netease.com:22222/pangu_tech/pangu-kun-ui.git"
+  },
+  "author": "hzsuqin@corp.netease.com",
+  "dependencies": {
+    "egg": "^2.6.1",
+    "egg-scripts": "^2.6.0",
+    "egg-view-ejs": "^2.0.0",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2"
+  },
+  "devDependencies": {
+    "@types/mocha": "^2.2.40",
+    "@types/node": "^7.0.12",
+    "@types/supertest": "^2.0.0",
+    "autoprefixer-loader": "^3.2.0",
+    "browser-sync": "^2.24.4",
+    "bs-fullscreen-message": "^1.1.0",
+    "concurrently": "^4.0.1",
+    "css-loader": "^0.28.11",
+    "egg-bin": "^4.6.2",
+    "egg-mock": "^3.16.0",
+    "egg-ts-helper": "^1.11.0",
+    "happypack": "^5.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "less-loader": "^4.1.0",
+    "shelljs": "^0.8.2",
+    "style-loader": "^0.23.0",
+    "ts-loader": "^4.3.0",
+    "tslib": "^1.9.0",
+    "tslint": "^4.0.0",
+    "typescript": "^3.0.0",
+    "webpack": "^4.20.0",
+    "webpack-cli": "^3.1.1",
+    "webpack-dev-middleware": "^3.1.3"
+  }
+}
