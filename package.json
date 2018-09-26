@@ -1,7 +1,7 @@
 {
-  "name": "kun-ui",
+  "name": "egg-react-ts",
   "version": "1.1.3",
-  "description": "kun-ui",
+  "description": "egg-react-ts",
   "scripts": {
     "dev": "concurrently -k -p \"[{name}]\" -n \"client-dev,server-dev\" -c \"cyan.bold,green.bold\" \"npm run client-dev\" \"npm run server-dev\"",
     "dist": "npm run client-dist-assets && npm run client-dist-webpack && npm run server-dist",
@@ -10,8 +10,8 @@
     "client-dist-webpack": "webpack --config ./build/webpack.config.prod.js",
     "server-dev": "egg-bin dev -r egg-ts-helper/register --port=9000 --ts",
     "server-dist": "ets && tsc -p tsconfig.json",
-    "start": "egg-scripts start --title=pangu-kun-ui --port=9000",
-    "stop": "egg-scripts stop --title=pangu-kun-ui",
+    "start": "egg-scripts start --title=pangu-egg-react-ts --port=9000",
+    "stop": "egg-scripts stop --title=pangu-egg-react-ts",
     "debug": "egg-bin debug -r egg-ts-helper/register",
     "test-local": "egg-bin test -r egg-ts-helper/register",
     "test": "npm run lint --fix && npm run test-local",
@@ -23,9 +23,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "ssh://git@g.hz.netease.com:22222/pangu_tech/pangu-kun-ui.git"
+    "url": "https://github.com/SuuQi/egg-react-typescript-boilerplate.git"
   },
-  "author": "hzsuqin@corp.netease.com",
+  "author": "suqin@corp.netease.com",
   "dependencies": {
     "egg": "^2.6.1",
     "egg-scripts": "^2.6.0",

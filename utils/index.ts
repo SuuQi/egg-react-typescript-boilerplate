@@ -1,7 +1,7 @@
 /*
- * @Author: hzsuqin 
+ * @Author: suqin 
  * @Date: 2018-08-15 14:19:21 
- * @Last Modified by: hzsuqin@corp.netease.com
+ * @Last Modified by: suqin@corp.netease.com
  * @Last Modified time: 2018-08-15 14:30:47
  * @description: 前后端公共的utils
  */
